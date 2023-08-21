@@ -126,14 +126,15 @@ class App extends Component {
           {List.length === 0 && (
             <p className="note">There is no history to show</p>
           )}
-          {result.length === 0 && (
+          {result.length === 0 ? (
             <p className="note">There is no history to show</p>
+          ) : (
+            <ul className="box">
+              {result.map(each => (
+                <Card detail={each} click={this.Dlt} key={each.id} />
+              ))}
+            </ul>
           )}
-          <ul className="box">
-            {result.map(each => (
-              <Card detail={each} click={this.Dlt} key={each.id} />
-            ))}
-          </ul>
         </div>
       </div>
     )
