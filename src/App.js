@@ -123,9 +123,7 @@ class App extends Component {
           </div>
         </div>
         <div>
-          {List.length === 0 && (
-            <p className="note">There is no history to show</p>
-          )}
+          
           {result.length === 0 ? (
             <p className="note">There is no history to show</p>
           ) : (
